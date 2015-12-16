@@ -16,10 +16,10 @@ RUN arch="$(dpkg --print-architecture)" \
 	&& chmod +x /usr/local/bin/gosu
 
 ENV KIBANA_VERSION 4.0.4
-ENV KIBANA_SHA1 a8a54fa58d37292f60c5749a8a472bdddeac45e5
+ENV KIBANA_SHA1 c05fbbd2a2d4e8b84467898d69da5734a471dbdb
 
 RUN set -x \
-	&& curl -fSL "https://github.com/brendangibat/kibana/releases/download/v4.0.4-aws/kibana-4.0.4-AWS-linux-x64.tar.gz" -o kibana.tar.gz \
+	&& curl -fSL "https://github.com/brendangibat/kibana/releases/download/v4.0.4-aws/kibana-4.0.4-aws-linux-x64.tar.gz" -o kibana.tar.gz \
 	&& echo "${KIBANA_SHA1}  kibana.tar.gz" | sha1sum -c - \
 	&& mkdir -p /opt/kibana \
 	&& tar -xz --strip-components=1 -C /opt/kibana -f kibana.tar.gz \
