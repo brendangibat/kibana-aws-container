@@ -16,7 +16,7 @@ RUN arch="$(dpkg --print-architecture)" \
 	&& chmod +x /usr/local/bin/gosu
 
 ENV KIBANA_VERSION 4.0.4
-ENV KIBANA_SHA1 cf376ea9ab4c0a8f430308992ac35baf5299c56f
+ENV KIBANA_SHA1 a4a765ee72e1c56730a0eb9faa9e7d8a1e1a4cb6
 
 RUN set -x \
 	&& curl -fSL "https://github.com/brendangibat/kibana/releases/download/v4.0.4-aws/kibana-4.0.4-aws-linux-x64.tar.gz" -o kibana.tar.gz \
